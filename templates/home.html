@@ -1,0 +1,479 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+      <!--footer css-->
+      <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+		<style type="text/css">
+		*{
+		margin: 0; padding:0; box-sizing: border-box;
+		font-family: 'Mulish', sans-serif;}
+		.grand_parent{ width: 100vw; height:60vh;
+			background: #dfe6e9; color: #fff;}
+		h1{
+			font-size: 2rem;
+			padding: 10px 0;
+			text-align: center;
+			color: #000;
+		}
+		p{
+			text-align: center;
+
+		}
+		.parents{ width: 100vw; height: auto; margin: auto;
+		        background:#636e72;
+			display: flex;  justify-content: space-around;
+			flex-wrap: wrap; transition: all 0.2 linear;
+		}
+		.child{
+
+			height: 150px;
+			background:#01495f;
+			box-shadow: 0 0 20px #bac3c3;
+			flex:1 1 200px;
+			margin: 20px;
+			text-color:#212529;
+			display:table;
+
+		}
+
+        <!--.child a{
+            display:table-cell;
+            vertical-align:middle;
+            text-align:center;
+
+            }-->
+
+		.child:first-child{
+			background: #F36D21;
+		}
+		.child:nth-child(2n){
+			background: #010101;
+
+		}
+		.child:last-child{
+			background: #1f8a46;
+		}
+		@media (max-width: 408px){
+			.grand_parent{height:50px; }
+		}
+		</style>
+
+
+    <title>PMGSISHA</title>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">PMGDISHA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Training</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Assessment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Assessment
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/img.png' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/img_1.png' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+    </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+    <div class="table-responsive">
+<table class="table table-striped table-bordered border-primary table-sm">
+<tbody>
+<tr class="table-primary">
+<th width="70px">SL. No</th>
+<th>States /UT&#8217;s</th>
+<th>Targets</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Uttar Pradesh</td>
+<td>11171000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bihar</td>
+<td>6630000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>West Bengal</td>
+<td>4481000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Maharashtra</td>
+<td>4433000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Madhya Pradesh</td>
+<td>3784000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rajasthan</td>
+<td>3712000</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Karnataka</td>
+<td>2705000</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Tamil Nadu</td>
+<td>2679000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Orissa</td>
+<td>2517000</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Gujarat</td>
+<td>2497000</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Andhra Pradesh</td>
+<td>2028000</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Telangana</td>
+<td>2028000</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Assam</td>
+<td>1929000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Jharkhand</td>
+<td>1803000</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Chhattisgarh</td>
+<td>1412000</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Kerala</td>
+<td>1257000</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Punjab</td>
+<td>1247000</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Haryana</td>
+<td>1191000</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Jammu &amp; Kashmir</td>
+<td>658000</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Uttarakhand</td>
+<td>506000</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Himachal Pradesh</td>
+<td>444000</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Tripura</td>
+<td>195000</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Meghalaya</td>
+<td>171000</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Manipur</td>
+<td>137000</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Nagaland</td>
+<td>101000</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Arunachal Pradesh</td>
+<td>77000</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Goa</td>
+<td>40000</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Mizoram</td>
+<td>38000</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Sikkim</td>
+<td>33000</td>
+</tr>
+<tr>
+<td>30</td>
+<td>NCT of Delhi</td>
+<td>30000</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Puducherry</td>
+<td>28000</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Andaman &amp; Nicobar Islands </td>
+<td>18000</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Dadra &amp; Nagar Haveli</td>
+<td>13000</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Daman &amp; Diu</td>
+<td>4000</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Chandigarh</td>
+<td>2000</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Lakshadweep</td>
+<td>1000</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>6,00,00,000</strong></td>
+</tr>
+</tbody>
+</table></div>
+    <!-- Footer -->
+
+     <!-- Footer -->
+<div class="grand_parent">
+			<h1>PROGRESS UPDATES </h1>
+			<div class="parents">
+				<div class="child ">
+                    <a href="https://www.pmgdisha.in/training-center-count-list/" class="text-white "><h4>Training Centers</h4></a>
+
+					<!--<p>Training Centers</p>-->
+				</div>
+				<div class="child">
+                    <a href="https://www.pmgdisha.in/students-count-list/" class="text-white "><h4>Registered Candidates</h4></a>
+				</div>
+				<div class="child">
+					<a href="https://www.pmgdisha.in/students-count-list/" class="text-white "><h4>Certified Students</h4></a>
+				</div>
+                <div class="child">
+					<a href="https://www.pmgdisha.in/students-count-list/" class="text-white "><h4>Training Completed</h4></a>
+				</div>
+			</div>
+		</div>
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <section class="">
+
+
+
+
+       <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5>About PMGDISHA</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Implementation Process</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Eligibility Criteria</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Guidelines and Letters</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">IEC Materials</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5>Training</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Training Centres</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Training Process</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Training Partners</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Training Curriculum</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5>Assessment</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Assessment Process</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Certifying Agencies</a>
+            </li>
+
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5>Partners</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Industry Partners</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">International Organization</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Civil Society Organization</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Academic Institutions</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="https://www.pmgdisha.in/">pmgdisha.in</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
